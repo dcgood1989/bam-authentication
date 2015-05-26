@@ -1,0 +1,15 @@
+List of Cheeses
+
+Cheddar - $4.25
+Ruby Cheese - $2.01
+
+<% if current_user %>
+<% @cheeses.each do |cheese| %>
+<%= link_to "Gouda - $7.25", cheese_path(cheese) %>
+
+<%= "#{cheese.name} - $#{cheese.price_per_lb}" %>
+<% end %>
+<% else %>
+  Welcome, please click the sign up or sign in links below
+<% end %>
+<%= link_to "New Cheese", new_cheese_path %>

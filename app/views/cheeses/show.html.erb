@@ -1,0 +1,6 @@
+<%= "Cheese Name: #{@cheese.name}" %>
+<%= "Cheese Price ($/lb): $#{@cheese.price_per_lb}.25" %>
+
+<%= link_to "Index", cheeses_path %>
+<%= link_to "Edit", edit_cheese_path(@cheese) %>
+<%= link_to "Destroy", cheese_path(@cheese), method: :delete, data: {confirm: "Do you want to delete"} %>
